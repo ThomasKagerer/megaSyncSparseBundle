@@ -9,3 +9,13 @@ I then tried rclone, but it does not properly check the shasum of the files (if 
 So i built this tool.
 
 Better make sure the sparsebundle is not changed during sync.
+
+# usage
+
+## configure your megaRoot
+
+open ```megaSyncSparsBundle.sh``` and configure the path to your megaRoot (/ = root, /backups = directory below root)
+
+## backup!
+
+```./megaSyncSparsBundle.sh [Location of your bundle file]```
