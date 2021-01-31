@@ -9,8 +9,6 @@ testMode=false # set to true to not really do changes
 # you better know what you are doing if you change anything from here on
 tmpFolder="./.syncSparsBundle.tmp"
 
-bundleFile=$(readlink -f "$1")
-
 function log() {
   echo -e "$1"
   
@@ -32,6 +30,12 @@ function cleanup {
   mega-sync -d "$syncId" > /dev/null
   status "Sync stopped"
 }
+
+function abspath() {
+  python -c "import os,sys; print(os.path.realpath(sys.argv[1]))" $1
+}
+
+bundleFile=$(abspath "$1")
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
