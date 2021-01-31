@@ -1,3 +1,5 @@
+One-Way Sync your TimeMachineBackups to Mega.nz
+
 # why
 
 I wanted to backup my TimeMachine sparsebundle files to mega, but mega sync has a 2-way sync and therefore I cannot be sure that it does not re-download locally deleted files parts of the SparseBundle
