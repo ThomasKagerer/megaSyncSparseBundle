@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # configure your mega root directory here:
-megaRoot="/tom-backups"
+megaRoot="/backups"
 logFile="/var/www/html/sync.log"
 statusFile="/var/www/html/index.html"
 testMode=false # set to true to not really do changes
