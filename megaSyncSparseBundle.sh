@@ -2,8 +2,8 @@
 
 # configure your mega root directory here:
 megaRoot="/backups"
-logFile="/var/www/html/sync.log"
-statusFile="/var/www/html/index.html"
+logFile=""
+statusFile=""
 testMode=false # set to true to not really do changes
 
 # you better know what you are doing if you change anything from here on
@@ -13,11 +13,16 @@ bundleFile=$(readlink -f "$1")
 
 function log() {
   echo -e "$1"
-  echo -e "$1" >> "$logFile"
+  
+  if [ ! -z "$logFile" ]; then
+    echo -e "$1" >> "$logFile"
+  fi
 }
 
 function status() {
+  if [ ! -z "$statusFile" ]; then
     echo "megaSyncSparseBundle $bundleName status: $1" > "$statusFile"
+  fi
 }
 
 function cleanup {
