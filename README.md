@@ -1,0 +1,2 @@
+# megaSyncSparseBundle
+syncSparseBundle
