@@ -99,7 +99,7 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
   done <$tmpFolder/toBeDeleted
 
   # purge tmp folder
-  # rm -Rf $tmpFolder
+  rm -Rf $tmpFolder
 
   # now that remote is cleaned, activate mega sync
   status "Syncing..."
